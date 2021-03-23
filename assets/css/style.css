@@ -1,0 +1,366 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* header */
+
+header {
+  width: 100%;
+  min-height: 30px;
+  background-color: #17184b;
+  padding: 10px 0px;
+  position: relative;
+}
+
+header .icon {
+  top: 15px;
+  left: 20px;
+  position: absolute;
+}
+
+header .title a {
+  color: #fff;
+  font-size: 14pt;
+  font-weight: bold;
+  position: absolute;
+  left: 40%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+header #menu-icon {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16pt;
+}
+
+header #menu-icon:hover {
+  opacity: 0.6;
+}
+
+header #header-nav {
+  position: relative;
+  z-index: 10;
+}
+
+header #header-nav ul {
+  background-color: #fff;
+  position: absolute;
+  right: 0px;
+  white-space: nowrap;
+  top: 40px;
+  padding: 0px;
+  list-style: none;
+  border: 1px solid #aaa;
+}
+
+header #header-nav ul li {
+  border-bottom: 1px solid #aaa;
+}
+
+header #header-nav ul li a {
+  display: block;
+  padding: 10px 20px;
+}
+
+header #header-nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header #header-nav ul li a:hover {
+  opacity: 0.7;
+  background-color: #0000ee;
+  color: #fff;
+}
+
+/* front-page */
+
+#front .top-image {
+  margin: 0px auto;
+}
+
+#front .top-image img {
+  width: 100%;
+  max-height: 500px;
+}
+
+#front #front-page-content-wrap {
+  margin: 0px auto;
+  max-width: 1200px;
+  min-width: 700px;
+}
+
+#front #front-page-content-wrap .content-wrap {
+  display: flex;
+  margin: 5px 0px;
+}
+
+#front #front-page-content-wrap .flex-reverse {
+  flex-flow: row-reverse;
+}
+
+#front #front-page-content-wrap .image-content {
+  max-width: 40%;
+  margin: 5px;
+}
+
+#front #front-page-content-wrap .image-content img {
+  width: 100%;
+}
+
+#front #front-page-content-wrap .explain-content {
+  min-width: 60%;
+  max-height: 360px;
+  color: #fff;
+  argin: 5px;
+}
+
+#front #front-page-content-wrap .explain-content .title {
+  text-align: center;
+  padding: 30px 0px;
+}
+
+#front #front-page-content-wrap .explain-content .title span {
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16pt;
+  border-bottom: dotted 1px #fff;
+}
+
+#front #front-page-content-wrap .explain-content .explain {
+  text-align: center;
+  min-height: 230px;
+  padding: 10px 0px;
+}
+
+#front #front-page-content-wrap .explain-content .explain .move-more-btn-row {
+  padding: 10px;
+  text-align: center;
+  padding-top: 170px;
+  /* ボタンを一番下にする */
+}
+
+#front
+  #front-page-content-wrap
+  .explain-content
+  .explain
+  .move-more-btn-row
+  .move-more-btn {
+  cursor: pointer;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  width: 150px;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+#front
+  #front-page-content-wrap
+  .explain-content
+  .explain
+  .move-more-btn-row
+  .move-more-btn:hover {
+  opacity: 0.7;
+}
+
+#front
+  #front-page-content-wrap
+  .explain-content
+  .explain
+  .move-more-btn-row
+  .move-more-btn
+  a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#front #front-page-content-wrap .news-wrap {
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #f6f6f6;
+  color: #000;
+}
+
+#front #front-page-content-wrap .news-wrap .title {
+  text-align: center;
+  font-weight: bold;
+}
+
+#front #front-page-content-wrap .news-wrap .news-row {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+#front #front-page-content-wrap .news-wrap .news-row .news-link {
+  display: inline-block;
+  margin: 10px auto;
+  color: #000;
+  text-decoration: none;
+}
+
+#front #front-page-content-wrap .news-wrap .news-row .news-link:hover {
+  opacity: 0.7;
+}
+
+#front #front-page-content-wrap .news-wrap .news-row .news-link .news-title {
+  font-size: 9pt;
+}
+#front #front-page-content-wrap .news-wrap .news-row .news-link .news-content {
+  font-size: 11pt;
+}
+
+#front #front-page-content-wrap .news-wrap .news-all-button-wrap {
+  margin: 15px 0px;
+  text-align: center;
+}
+
+#front #front-page-content-wrap .news-wrap .news-all-button-wrap button {
+  cursor: pointer;
+  border-radius: 30px;
+  border: 2px solid #000;
+  width: 150px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #f6f6f6;
+}
+
+#front #front-page-content-wrap .news-wrap .news-all-button-wrap button:hover {
+  opacity: 0.7;
+}
+
+.background-color-orange {
+  background-color: #ef834a;
+}
+
+.background-color-blue {
+  background-color: #3b9dcb;
+}
+
+.background-color-red {
+  background-color: #bc344c;
+}
+
+/* footer */
+
+#footer {
+  background-color: #17184b;
+  color: #fff;
+  width: 100%;
+  padding: 10px 0px;
+  white-space: nowrap;
+}
+
+#footer .footer-contents {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+#footer .footer-contents-contact {
+  margin-left: 50px;
+}
+
+#footer .footer-contents-contact .enterprise-detail {
+  margin-top: 32px;
+  color: #ccc;
+}
+#footer .footer-contents-contact .enterprise-detail .name a {
+  display: flex;
+  text-decoration: none;
+}
+
+#footer .footer-contents-contact .enterprise-detail .name a span {
+  color: #ccc;
+  padding-left: 5px;
+}
+
+#footer .footer-contents-sitemap {
+  margin-right: 50px;
+}
+
+#footer .footer-nav ul {
+  margin: 10px 0px 10px 50px;
+  list-style: none;
+}
+
+#footer .footer-nav ul li {
+  width: 300px;
+  border-bottom: 0.5px solid #666;
+}
+
+#footer .footer-nav ul li a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #333;
+  position: relative;
+  text-decoration: none;
+  padding-top: 20px;
+}
+
+#footer .footer-nav ul li a:hover {
+  color: #0bd;
+  border-bottom: 1px solid #0bd;
+}
+
+#footer .footer-nav ul li a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 7px;
+  height: 12px;
+  background-image: url("../images/svg/icon-rightArrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#footer .copyright {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* スマホレイアウト */
+
+@media screen and (max-width: 800px) {
+  #front #front-page-content-wrap {
+    max-width: inherit;
+    min-width: inherit;
+  }
+
+  #front #front-page-content-wrap .content-wrap {
+    display: block;
+  }
+
+  #front #front-page-content-wrap .image-content {
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: inherit;
+  }
+
+  #front #front-page-content-wrap .explain-content {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  #front #front-page-content-wrap .image-content img {
+    object-fit: contain;
+    width: 100%;
+  }
+
+  #footer .footer-contents {
+    display: block;
+  }
+
+  #footer .footer-nav ul li {
+    width: 100%;
+  }
+}
