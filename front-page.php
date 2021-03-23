@@ -12,7 +12,7 @@ get_header();
             <div class="image-content">
                 <img alt="プログラミング教室" src="<?php echo get_template_directory_uri(); ?>/assets/images/ocean.jpg" />
             </div>
-            <div class="explain-content background-color-orange">
+            <div class="explain-content">
                 <div class="title">
                     <span>プログラミング教室</span>
                 </div>
@@ -36,7 +36,7 @@ get_header();
             <div class="image-content">
                 <img alt="出前授業" src="<?php echo get_template_directory_uri(); ?>/assets/images/ocean.jpg" />
             </div>
-            <div class="explain-content background-color-blue">
+            <div class="explain-content">
                 <div class="title">
                     <span>出前授業</span>
                 </div>
@@ -57,7 +57,7 @@ get_header();
             <div class="image-content">
                 <img alt="陸上教室" src="<?php echo get_template_directory_uri(); ?>/assets/images/ocean.jpg" />
             </div>
-            <div class="explain-content background-color-red">
+            <div class="explain-content">
                 <div class="title">
                     <span>陸上教室</span>
                 </div>
@@ -73,32 +73,34 @@ get_header();
             </div>
         </div>
 
-        <div class="news-wrap">
-            <?php $news_obj = get_term_by('slug', 'news', 'category'); ?>
-            <div class="title"><?php echo $news_obj->name; ?></div>
+        <div class="news-content">
+            <div class="news-wrap">
+                <?php $news_obj = get_term_by('slug', 'news', 'category'); ?>
+                <div class="title"><?php echo $news_obj->name; ?></div>
 
-            <?php
-            $news_posts = get_specific_posts('post', 'category', 'news', 4);
-            if ($news_posts->have_posts()) :
-                while ($news_posts->have_posts()) : $news_posts->the_post();
-            ?>
-                    <div class="news-row">
-                        <a class="news-link" href="<?php the_permalink(); ?>">
-                            <div class="news-title"><?php the_time('Y.m.d'); ?> / <?php the_title(); ?></div>
-                            <div class="news-content">
-                                <?php echo get_flexible_excerpt(110); ?>
-                            </div>
-                        </a>
-                    </div>
-            <?php
-                endwhile;
-                wp_reset_postdata();
-            endif;
-            ?>
-            <div class="news-all-button-wrap">
-                <button type="button" onclick="javascript:location.href = '<?php echo esc_url(get_term_link($news_obj)); ?>';">
-                    MORE
-                </button>
+                <?php
+                $news_posts = get_specific_posts('post', 'category', 'news', 4);
+                if ($news_posts->have_posts()) :
+                    while ($news_posts->have_posts()) : $news_posts->the_post();
+                ?>
+                        <div class="news-row">
+                            <a class="news-link" href="<?php the_permalink(); ?>">
+                                <div class="news-title"><?php the_time('Y.m.d'); ?> / <?php the_title(); ?></div>
+                                <div class="news-body">
+                                    <?php echo get_flexible_excerpt(110); ?>
+                                </div>
+                            </a>
+                        </div>
+                <?php
+                    endwhile;
+                    wp_reset_postdata();
+                endif;
+                ?>
+                <div class="news-all-button-wrap">
+                    <button type="button" onclick="javascript:location.href = '<?php echo esc_url(get_term_link($news_obj)); ?>';">
+                        MORE
+                    </button>
+                </div>
             </div>
         </div>
     </div>

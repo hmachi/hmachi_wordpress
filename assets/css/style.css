@@ -54,11 +54,11 @@ header #header-nav ul {
   top: 40px;
   padding: 0px;
   list-style: none;
-  border: 1px solid #aaa;
+  border: 1px solid #f4f4f4;
 }
 
 header #header-nav ul li {
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #f4f4f4;
 }
 
 header #header-nav ul li a {
@@ -79,6 +79,10 @@ header #header-nav ul li a:hover {
 
 /* front-page */
 
+#front {
+  background-color: #f4f4f4;
+}
+
 #front .top-image {
   margin: 0px auto;
 }
@@ -96,7 +100,8 @@ header #header-nav ul li a:hover {
 
 #front #front-page-content-wrap .content-wrap {
   display: flex;
-  margin: 5px 0px;
+  margin: 5px;
+  background-color: #fff;
 }
 
 #front #front-page-content-wrap .flex-reverse {
@@ -115,8 +120,7 @@ header #header-nav ul li a:hover {
 #front #front-page-content-wrap .explain-content {
   min-width: 60%;
   max-height: 360px;
-  color: #fff;
-  argin: 5px;
+  margin: 5px;
 }
 
 #front #front-page-content-wrap .explain-content .title {
@@ -128,7 +132,7 @@ header #header-nav ul li a:hover {
   padding: 10px 20px;
   font-weight: bold;
   font-size: 16pt;
-  border-bottom: dotted 1px #fff;
+  border-bottom: dotted 1px #dc143c;
 }
 
 #front #front-page-content-wrap .explain-content .explain {
@@ -150,12 +154,13 @@ header #header-nav ul li a:hover {
   .explain
   .move-more-btn-row
   .move-more-btn {
+  position: relative;
   cursor: pointer;
-  border-radius: 30px;
-  border: 2px solid #fff;
-  width: 150px;
-  padding: 5px;
+  border: 2px solid #dc143c;
+  width: 130px;
   margin: 0 auto;
+  transition: 0.3s;
+  z-index: 1;
 }
 
 #front
@@ -163,8 +168,27 @@ header #header-nav ul li a:hover {
   .explain-content
   .explain
   .move-more-btn-row
-  .move-more-btn:hover {
-  opacity: 0.7;
+  .move-more-btn::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  background: #dc143c;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+}
+#front
+  #front-page-content-wrap
+  .explain-content
+  .explain
+  .move-more-btn-row
+  .move-more-btn:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
 }
 
 #front
@@ -174,74 +198,141 @@ header #header-nav ul li a:hover {
   .move-more-btn-row
   .move-more-btn
   a {
+  font-size: 10pt;
   text-decoration: none;
+  color: #dc143c;
+  padding: 7px;
+  display: block;
+}
+
+#front
+  #front-page-content-wrap
+  .explain-content
+  .explain
+  .move-more-btn-row
+  .move-more-btn
+  a:hover {
+  transition: 0.3s;
   color: #fff;
 }
 
-#front #front-page-content-wrap .news-wrap {
-  margin: 10px auto;
-  padding: 10px;
-  background-color: #f6f6f6;
-  color: #000;
+#front #front-page-content-wrap .news-content {
+  padding: 10px 5px 10px 5px;
 }
 
-#front #front-page-content-wrap .news-wrap .title {
+#front #front-page-content-wrap .news-content .news-wrap {
+  color: #000;
+  background-color: #fff;
+}
+
+#front #front-page-content-wrap .news-content .news-wrap .title {
+  padding: 15px 0px;
   text-align: center;
   font-weight: bold;
 }
 
-#front #front-page-content-wrap .news-wrap .news-row {
+#front #front-page-content-wrap .news-content .news-wrap .news-row {
+  padding: 10px;
   margin: 0 auto;
   max-width: 1000px;
 }
 
-#front #front-page-content-wrap .news-wrap .news-row .news-link {
-  display: inline-block;
-  margin: 10px auto;
+#front #front-page-content-wrap .news-content .news-wrap .news-row .news-link {
+  display: block;
+  margin: 0px auto;
   color: #000;
   text-decoration: none;
 }
 
-#front #front-page-content-wrap .news-wrap .news-row .news-link:hover {
+#front
+  #front-page-content-wrap
+  .news-content
+  .news-wrap
+  .news-row
+  .news-link:hover {
   opacity: 0.7;
 }
 
-#front #front-page-content-wrap .news-wrap .news-row .news-link .news-title {
+#front
+  #front-page-content-wrap
+  .news-content
+  .news-wrap
+  .news-row
+  .news-link
+  .news-title {
   font-size: 9pt;
 }
-#front #front-page-content-wrap .news-wrap .news-row .news-link .news-content {
+#front
+  #front-page-content-wrap
+  .news-content
+  .news-wrap
+  .news-row
+  .news-link
+  .news-body {
   font-size: 11pt;
+  background-color: #fff;
 }
 
-#front #front-page-content-wrap .news-wrap .news-all-button-wrap {
-  margin: 15px 0px;
+#front #front-page-content-wrap .news-content .news-wrap .news-all-button-wrap {
+  margin: 10px 0px;
+  padding-bottom: 15px;
   text-align: center;
 }
 
-#front #front-page-content-wrap .news-wrap .news-all-button-wrap button {
+#front
+  #front-page-content-wrap
+  .news-content
+  .news-wrap
+  .news-all-button-wrap
+  button {
+  position: relative;
+  border: 2px solid #dc143c;
+  font-size: 10pt;
   cursor: pointer;
-  border-radius: 30px;
-  border: 2px solid #000;
-  width: 150px;
+  color: #dc143c;
+  width: 130px;
   padding: 10px;
   margin: 0 auto;
-  background-color: #f6f6f6;
+  transition: 0.3s;
+  background: #fff;
+  z-index: 1;
 }
 
-#front #front-page-content-wrap .news-wrap .news-all-button-wrap button:hover {
-  opacity: 0.7;
+#front
+  #front-page-content-wrap
+  .news-content
+  .news-wrap
+  .news-all-button-wrap
+  button:hover {
+  color: #fff;
 }
 
-.background-color-orange {
-  background-color: #ef834a;
+#front
+  #front-page-content-wrap
+  .news-content
+  .news-wrap
+  .news-all-button-wrap
+  button::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  background: #dc143c;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
 }
-
-.background-color-blue {
-  background-color: #3b9dcb;
-}
-
-.background-color-red {
-  background-color: #bc344c;
+#front
+  #front-page-content-wrap
+  .news-content
+  .news-wrap
+  .news-all-button-wrap
+  button:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
 }
 
 /* footer */
@@ -290,14 +381,13 @@ header #header-nav ul li a:hover {
 
 #footer .footer-nav ul li {
   width: 300px;
-  border-bottom: 0.5px solid #666;
 }
 
 #footer .footer-nav ul li a {
   color: #fff;
   display: block;
   width: 100%;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #f4f4f4;
   position: relative;
   text-decoration: none;
   padding-top: 20px;
@@ -311,11 +401,11 @@ header #header-nav ul li a:hover {
 #footer .footer-nav ul li a::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 60%;
   right: 3px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-10%);
+  -ms-transform: translateY(-10%);
+  transform: translateY(-10%);
   width: 7px;
   height: 12px;
   background-image: url("../images/svg/icon-rightArrow.svg");
