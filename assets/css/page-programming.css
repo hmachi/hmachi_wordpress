@@ -1,0 +1,35 @@
+#page-programming {
+  background-color: #f4f4f4;
+}
+
+#page-programming .top-content {
+  margin: 0px auto;
+  position: relative;
+}
+
+#page-programming .top-content img {
+  object-fit: cover;
+  height: 500px;
+  width: 100%;
+}
+
+#page-programming .top-content .top-label-wrap {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  font-family: "Noto Sans Japanese", sans-serif;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+#page-programming .page-content-wrap {
+  margin: 0px auto;
+  padding: 10px;
+  max-width: 1200px;
+  min-width: 700px;
+}

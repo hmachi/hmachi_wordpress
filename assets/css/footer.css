@@ -1,0 +1,92 @@
+#footer {
+  background-color: #17184b;
+  color: #fff;
+  width: 100%;
+  padding: 10px 0px;
+  white-space: nowrap;
+}
+
+#footer .footer-contents {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+#footer .footer-contents-contact {
+  margin-left: 50px;
+}
+
+#footer .footer-contents-contact .enterprise-detail {
+  margin-top: 32px;
+  color: #ccc;
+}
+#footer .footer-contents-contact .enterprise-detail .name a {
+  display: flex;
+  text-decoration: none;
+}
+
+#footer .footer-contents-contact .enterprise-detail .name a span {
+  color: #ccc;
+  padding-left: 5px;
+}
+
+#footer .footer-contents-sitemap {
+  margin-right: 50px;
+}
+
+#footer .footer-nav ul {
+  margin: 10px 0px 10px 50px;
+  list-style: none;
+}
+
+#footer .footer-nav ul li {
+  width: 300px;
+}
+
+#footer .footer-nav ul li a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #f4f4f4;
+  position: relative;
+  text-decoration: none;
+  padding-top: 20px;
+}
+
+#footer .footer-nav ul li a:hover {
+  color: #0bd;
+  border-bottom: 1px solid #0bd;
+}
+
+#footer .footer-nav ul li a::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  right: 3px;
+  -webkit-transform: translateY(-10%);
+  -ms-transform: translateY(-10%);
+  transform: translateY(-10%);
+  width: 7px;
+  height: 12px;
+  background-image: url("../images/svg/icon-rightArrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#footer .copyright {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* スマホレイアウト */
+
+@media screen and (max-width: 800px) {
+  #footer .footer-contents {
+    display: block;
+  }
+
+  #footer .footer-nav ul li {
+    width: 100%;
+  }
+}

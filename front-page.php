@@ -3,71 +3,80 @@ get_header();
 ?>
 
 <main id="front">
-    <div class="top-image">
-        <img alt="<?php bloginfo('name'); ?>" src="<?php echo get_template_directory_uri(); ?>/assets/images/ocean.jpg" />
+    <?php
+    $front_page_id = get_option('page_on_front');
+    $frontPage = get_page($front_page_id);
+    ?>
+    <div class="top-content">
+        <img alt="<?php bloginfo('name'); ?>" src="<?php echo get_the_post_thumbnail_url($front_page_id); ?>" />
+        <div class="top-label-wrap">
+            <?php echo $frontPage->post_excerpt; ?>
+        </div>
+
     </div>
 
-    <div id="front-page-content-wrap">
+    <div class="front-page-content-wrap">
         <div class="content-wrap">
+            <?php
+            $programmingPage = get_page_by_path("programming");
+            ?>
             <div class="image-content">
-                <img alt="プログラミング教室" src="<?php echo get_template_directory_uri(); ?>/assets/images/ocean.jpg" />
+                <img alt="<?php echo $programmingPage->post_title; ?>" src="<?php echo get_the_post_thumbnail_url($programmingPage->ID); ?>" />
             </div>
             <div class="explain-content">
                 <div class="title">
-                    <span>プログラミング教室</span>
+                    <span><?php echo $programmingPage->post_title; ?></span>
                 </div>
 
                 <div class="explain">
                     <div>
-                        プログラミング教室についての説明などを記載
+                        <?php echo $programmingPage->post_excerpt; ?>
                     </div>
+                </div>
 
-
-                    <div class="move-more-btn-row">
-                        <div class="move-more-btn">
-                            <a href="<?php echo get_home_url(); ?>/programming">MORE</a>
-                        </div>
+                <div class="move-more-btn-row">
+                    <div class="move-more-btn">
+                        <a href="<?php echo get_home_url(); ?>/programming">MORE</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="content-wrap flex-reverse">
+            <?php $classPage = get_page_by_path("class"); ?>
             <div class="image-content">
-                <img alt="出前授業" src="<?php echo get_template_directory_uri(); ?>/assets/images/ocean.jpg" />
+                <img alt="<?php echo $classPage->post_title; ?>" src="<?php echo get_the_post_thumbnail_url($classPage->ID); ?>" />
             </div>
             <div class="explain-content">
                 <div class="title">
-                    <span>出前授業</span>
+                    <span><?php echo $classPage->post_title; ?></span>
                 </div>
                 <div class="explain">
-                    <div>出前授業についての説明などを記載</div>
-
-                    <div class="move-more-btn-row">
-                        <div class="move-more-btn">
-                            <a href="<?php echo get_home_url(); ?>/class">MORE</a>
-                        </div>
+                    <div><?php echo $classPage->post_excerpt; ?></div>
+                </div>
+                <div class="move-more-btn-row">
+                    <div class="move-more-btn">
+                        <a href="<?php echo get_home_url(); ?>/class">MORE</a>
                     </div>
                 </div>
             </div>
-
         </div>
 
         <div class="content-wrap">
+            <?php $trackandfieldPage = get_page_by_path("trackandfield"); ?>
             <div class="image-content">
-                <img alt="陸上教室" src="<?php echo get_template_directory_uri(); ?>/assets/images/ocean.jpg" />
+                <img alt="<?php echo $trackandfieldPage->post_title; ?>" src="<?php echo get_the_post_thumbnail_url($trackandfieldPage->ID); ?>" />
             </div>
             <div class="explain-content">
                 <div class="title">
-                    <span>陸上教室</span>
+                    <span><?php echo $trackandfieldPage->post_title; ?></span>
                 </div>
                 <div class="explain">
-                    <div>陸上教室についての説明などを記載</div>
-
-                    <div class="move-more-btn-row">
-                        <div class="move-more-btn">
-                            <a href="<?php echo get_home_url(); ?>/trackandfield">MORE</a>
-                        </div>
+                    <div><?php echo $trackandfieldPage->post_excerpt; ?></div>
+                </div>
+                <div class="move-more-btn-row">
+                    <div class="move-more-btn">
+                        <a href="<?php echo get_home_url(); ?>/trackandfield">MORE</a>
                     </div>
                 </div>
             </div>
