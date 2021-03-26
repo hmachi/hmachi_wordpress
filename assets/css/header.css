@@ -1,3 +1,69 @@
+#first-image-wrap {
+  position: fixed;
+  background-color: #fff;
+  color: #000;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  animation-duration: 5s;
+  animation-name: disp-wrap;
+  animation-fill-mode: forwards;
+}
+
+#first-image-wrap .first-image {
+  padding-top: 200px;
+  text-align: center;
+  opacity: 0;
+  animation-name: disp-image;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+#first-image-wrap .first-image img {
+  width: 100px;
+  animation: rotate-anime 2s linear infinite;
+}
+
+@keyframes disp-wrap {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes disp-image {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-anime {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 header {
   width: 100%;
   min-height: 30px;

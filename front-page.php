@@ -12,7 +12,6 @@ get_header();
         <div class="top-label-wrap">
             <?php echo $frontPage->post_excerpt; ?>
         </div>
-
     </div>
 
     <div class="front-page-content-wrap">

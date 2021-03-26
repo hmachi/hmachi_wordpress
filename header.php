@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="keywords" content="社谷内,能登,教育,子供,陸上,プログラミング" />
     <meta name="description" content="<?php bloginfo('description'); ?>" />
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/header.css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/footer.css" />
@@ -24,6 +24,13 @@
 </head>
 
 <body>
+
+    <div id="first-image-wrap">
+        <div class="first-image">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" />
+        </div>
+    </div>
+
     <header>
         <div class="icon">
             <a href="<?php echo home_url(); ?>">

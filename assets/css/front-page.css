@@ -15,7 +15,7 @@
 }
 
 #front .top-content .top-label-wrap {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 10px 20px;
   position: absolute;
   top: 40%;
@@ -23,14 +23,14 @@
   transform: translateY(-50%) translateX(-50%);
   -webkit-transform: translateY(-50%) translateX(-50%);
   font-family: "Noto Sans Japanese", sans-serif;
-  color: #fff;
+  color: #000;
   font-weight: bold;
   text-align: center;
 }
 
 #front .front-page-content-wrap {
   margin: 0px auto;
-  max-width: 1200px;
+  max-width: 1000px;
   min-width: 700px;
 }
 
